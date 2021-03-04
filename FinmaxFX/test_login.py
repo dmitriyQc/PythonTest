@@ -1,11 +1,9 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
-from faker import Faker
+import time
 
 def test_login():
 
-    fake = Faker()
     driver = WebDriver()
-    driver.get('https://finmaxfx.com/login')
-
-    print(fake.msisdn())
+    driver.get('https://finmaxfx.com/registration')
+    time.sleep(10)
     ...
