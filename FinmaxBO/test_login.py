@@ -11,6 +11,7 @@ def test_registration():
     driver.maximize_window()
     driver.get(link)
 
+#Авторизация
     login_form = driver.find_element_by_css_selector('[class=\"active\"]').click()
     time.sleep(1)
     login = driver.find_element_by_name('login_name').send_keys(email)
