@@ -5,5 +5,5 @@ def test_login():
 
     driver = WebDriver()
     driver.get('https://finmaxfx.com/registration')
-    time.sleep(10)
+    time.sleep(1)
     ...
