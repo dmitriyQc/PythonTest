@@ -1,11 +1,10 @@
 from selenium.webdriver.chrome.webdriver import WebDriver
 from faker import Faker
 
-def test_login():
+def test_registration():
 
     fake = Faker()
     driver = WebDriver()
-    driver.get('https://finmaxfx.com/login')
+    name = fake.name()
 
-    print(fake.msisdn())
-    ...
+    print(name)
