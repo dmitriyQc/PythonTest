@@ -34,7 +34,9 @@ def test_registration():
     time.sleep(5)
     params = {"email": random_mail}
     user_request = requests.post("https://finmaxfx.com/api/checkEmail.php", params=params)
-    print(user_request.status_code, '\n', user_request.json())
-    user = user_request.json()
-    assert user['a_aid'] == '980', 'Failed'
-    print("Success")
+    try:
+        user = user_request.json()
+        assert user['a_aid'] == '957'
+        print(user_request.status_code, user_request.json(), " - Success")
+    except:
+        print(user_request.status_code, user_request.json(), " - Failed")

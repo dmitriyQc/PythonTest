@@ -32,7 +32,7 @@ def test_landing_registration():
 
             check_box = driver.find_element_by_css_selector('[class=\"fa fa-check\"]').click()
 
-            registration_click = driver.find_element_by_name('submit').click()
+            # registration_click = driver.find_element_by_name('submit').click()
             print(random_mail)
             time.sleep(3)
 
