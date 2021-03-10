@@ -1,1 +1,24 @@
-{"result":"error","message":"Email doesnt exists"}
+{
+    "user": {
+        "email": "qolson@jones-herrera.net",
+        "a_aid": "980"
+    }
+}
+{
+    "user": {
+        "result": "error",
+        "message": "Email doesnt exists"
+    }
+}
+{
+    "user": {
+        "result": "error",
+        "message": "Email doesnt exists"
+    }
+}
+{
+    "user": {
+        "result": "error",
+        "message": "Email doesnt exists"
+    }
+}

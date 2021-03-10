@@ -32,7 +32,7 @@ def test_landing_registration():
 
             check_box = driver.find_element_by_css_selector('[class=\"fa fa-check\"]').click()
 
-            # registration_click = driver.find_element_by_name('submit').click()
+            #registration_click = driver.find_element_by_name('submit').click()
             print(random_mail)
             time.sleep(3)
 
@@ -47,7 +47,10 @@ def test_landing_registration():
         except:
             print(user_request.status_code, user_request.json(), ' - Failed')
 
-            with open('response_result.json', 'wb') as result:
+        with open('response_result.json', 'a') as result:
+            json.dump({'user': user}, result, indent=4)
+            result.write('\n')
+            with open('response_result.json', 'wb+') as result:
                 for chunk in user_request.iter_lines(chunk_size=128):
                     result.write(chunk)
 
