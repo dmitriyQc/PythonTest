@@ -8,6 +8,9 @@ import time
 def test_landing_registration():
     driver = WebDriver()
 
+    # очистка .json файла перед записью
+    clear_json = open("response_result.json", 'w').close()
+
     with open('url.json', 'r', encoding='utf-8') as params:
         link = json.load(params)
         print()
@@ -47,7 +50,7 @@ def test_landing_registration():
         except:
             print(user_request.status_code, user_request.json(), ' - Failed')
 
-        with open('response_result.json', 'a') as result:
-            json.dump({'user': user}, result, indent=4)
-            result.write('\n')
+            with open('response_result.json', 'a') as result:
+                json.dump({'user': user}, result, indent=4)
+                result.write('\n')
 
