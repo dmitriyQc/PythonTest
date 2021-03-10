@@ -50,7 +50,4 @@ def test_landing_registration():
         with open('response_result.json', 'a') as result:
             json.dump({'user': user}, result, indent=4)
             result.write('\n')
-            with open('response_result.json', 'wb+') as result:
-                for chunk in user_request.iter_lines(chunk_size=128):
-                    result.write(chunk)
 
