@@ -29,7 +29,7 @@ def test_registration():
 
     check_box = driver.find_element_by_css_selector('[class=\"fa fa-check\"]').click()
 
-    registration_click = driver.find_element_by_name('submit').click()
+    #registration_click = driver.find_element_by_name('submit').click()
 
     time.sleep(5)
     params = {"email": random_mail}
